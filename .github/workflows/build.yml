@@ -44,7 +44,9 @@ jobs:
             prefix=
             suffix=
           tags: |
-            type=sha,enable=true,priority=100,format=short
+            # set latest tag for default branch
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,enable=true,priority=100,prefix=,suffix=,format=short
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3.0.0
