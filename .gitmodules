@@ -1,0 +1,3 @@
+[submodule "rules/rules"]
+	path = rules/rules
+	url = https://github.com/Yara-Rules/rules
