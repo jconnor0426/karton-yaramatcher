@@ -7,4 +7,5 @@ COPY ./README.md ./README.md
 COPY ./karton ./karton
 COPY ./setup.py ./setup.py
 RUN pip install .
-CMD karton-yaramatcher
+COPY ./rules ./rules
+CMD karton-yaramatcher --rules ./rules
