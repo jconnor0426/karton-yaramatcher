@@ -26,6 +26,9 @@ jobs:
         with:
           submodules: 'recursive'
       
+      - name: Verify rules repo
+        run: find ./rules -type f -name "*.yar*" | wc -l 
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
